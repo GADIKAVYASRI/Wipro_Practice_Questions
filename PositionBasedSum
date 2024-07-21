@@ -1,0 +1,23 @@
+import java.util.*;
+class PositionBasedSum {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int a[]=new int[n];
+    int t=10;
+    int s=0;
+    int sum=0;
+    for(int i=0;i<n;i++){
+        a[i]=sc.nextInt();
+    }
+    for(int j=0;j<n;j++){
+        for(int k=0;k<=j;k++){
+            sum=a[j]%10;
+            a[j]=a[j]/10;
+            
+        }
+        s+=(sum*sum);
+    }
+    System.out.println(s);
+    }
+}
