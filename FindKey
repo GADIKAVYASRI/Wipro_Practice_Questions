@@ -1,0 +1,32 @@
+import java.util.*;
+class FindKey{
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int i1=sc.nextInt();
+    int i2=sc.nextInt();
+    int i3=sc.nextInt();
+    String s=Integer.toString(i3);
+    int l=i1%10;
+    i1=i1/10;
+    int i4=i1%10;
+    i1=i1/10;
+    int j1=i1%10;
+    i1=i1/10;
+    int j=i1%10;
+
+    int m1=i2%10;
+    i2=i2/10;
+    int m2=i2%10;
+    i2=i2/10;
+    int k=i2%10;
+
+    ArrayList<Character> li=new ArrayList<>();
+    for(int i=0;i<s.length();i++){
+        char ch=s.charAt(i);
+        li.add(ch);
+    }
+    char str=Collections.max(li);
+    int r=Character.getNumericValue(str);
+    System.out.print((j*k)-r);
+    }
+}
