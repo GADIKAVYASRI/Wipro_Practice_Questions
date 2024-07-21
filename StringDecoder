@@ -1,0 +1,20 @@
+import java.util.*;
+class StringDecoder {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.next();
+        int count=0;
+        String str="";
+        char arr[]={'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='0'){
+                str+=arr[count-1];
+                count=0;
+            }
+            else{
+                count++;
+            }
+        }
+        System.out.println(str);
+    }
+}
