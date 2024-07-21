@@ -1,0 +1,24 @@
+import java.util.*;
+class FindWord{
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    String s=sc.next();
+    s=s.toUpperCase();
+    ArrayList<Character> li1=new ArrayList<>();
+    char ch[]=s.toCharArray();
+    for(int i=0;i<ch.length;i++){
+        if(ch[i]==':'){
+            continue;
+        }
+        li1.add(ch[i]);
+    }
+    for(int j=0;j<li1.size();j++){
+        if(li1.get(j)==li1.get(j+1)){
+            li1.remove(j+1);
+        }
+    }
+    for(int k=0;k<li1.size();k++){
+        System.out.print(li1.get(k));
+    }
+    }
+}
