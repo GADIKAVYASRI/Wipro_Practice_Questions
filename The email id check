@@ -1,0 +1,84 @@
+import java.util.*;
+class StringDecoder {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.next();
+        String s1="";
+        String s2="";
+        String s3="";
+        if(s.contains(".com")){
+            for(int k=s.length()-4;k<s.length();k++){
+                s3+=s.charAt(k);
+            }
+            if(s.contains("@gmail") || s.contains("@wipro") || s.contains("@yahoo")){
+                for(int i=0;i<s.length()-10;i++){
+                    if(Character.isDigit(s.charAt(i))){
+                        s1+=s.charAt(i);
+                    }
+                    else if(Character.isLetter(s.charAt(i))){
+                        s1+=s.charAt(i);
+                    }
+                    else{
+                        s1="invalid";
+                        break;
+                    }
+                }
+                for(int j=s.length()-10;j<s.length()-4;j++){
+                    s2+=s.charAt(j);
+                }
+            }
+            else{
+                s2="invalid";
+                for(int i=0;i<s.length()-10;i++){
+                    if(Character.isDigit(s.charAt(i))){
+                        s1+=s.charAt(i);
+                    }
+                    else if(Character.isLetter(s.charAt(i))){
+                        s1+=s.charAt(i);
+                    }
+                    else{
+                        s1="invalid";
+                        break;
+                    }
+                }
+            }
+        }
+        else{
+                s3="invalid";
+                if(s.contains("@gmail") || s.contains("@wipro") || s.contains("@yahoo")){
+                for(int i=0;i<s.length()-10;i++){
+                    if(Character.isDigit(s.charAt(i))){
+                        s1+=s.charAt(i);
+                    }
+                    else if(Character.isLetter(s.charAt(i))){
+                        s1+=s.charAt(i);
+                    }
+                    else{
+                        s1="invalid";
+                        break;
+                    }
+                }
+                for(int j=s.length()-10;j<s.length()-4;j++){
+                    s2+=s.charAt(j);
+                }
+                }
+                else{
+                    s2="invalid";
+                    for(int i=0;i<s.length()-10;i++){
+                    if(Character.isDigit(s.charAt(i))){
+                        s1+=s.charAt(i);
+                    }
+                    if(Character.isLetter(s.charAt(i))){
+                        s1+=s.charAt(i);
+                    }
+                    else{
+                        s1="invalid";
+                        break;
+                    }
+                }
+                }
+        }
+        
+        System.out.print(s1+":"+s2+":"+s3);
+        }
+}
